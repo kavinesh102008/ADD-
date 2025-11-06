@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PERSONAL INFO</title>
+  <style>
+    body {
+      background-image: url("fp.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      height: 100vh;
+      color: rgb(72, 217, 243);
+      text-align: center;
+      
+    
+    #t {
+      font-size: 60px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-shadow: 0 0 20px cyan;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thanks for entering your details!!<br>Get ready for the contest</h1><h2>The programme starts by 6.00p.m</h2><h2>Remaining time</h2>
+  <p id="t"></p>
+
+  <script>
+    setInterval(() => {
+      let d = new Date(), e = new Date();
+      e.setHours(18, 0, 0, 0);
+      if (d > e) e.setDate(e.getDate() + 1);
+      let s = (e - d) / 1000;
+      document.getElementById("t").innerHTML =
+        `${s / 3600 | 0}h ${(s / 60) % 60 | 0}m ${s % 60 | 0}s`;
+    }, 1000);
+  </script>
+</body>
+</html>

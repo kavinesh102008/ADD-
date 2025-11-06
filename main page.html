@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>kavinesh</title>
+        <link rel ="icon" herf="html/dow.png">
+        </head>
+    <body bgcolor = "black" style=" color:rgb(114, 178, 242) ;">
+    <style>
+        body {
+    background-image: url("bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    height: 100vh;}
+</style>
+        <center>
+        <h1>ONLINE CODING CONTEST<h1>
+     <form onsubmit="showDetails(); return false;">
+  <br>
+  <br>
+  <label >Name:<input type="text" id="name" required><br></label><br>
+   <label>Gmail:<input type="email" id="email" required><br></label><br>
+  <label>Mobile:<input type="tel" id="mobile" required><br></label><br>
+
+ <a href="C:\Users\KAVINESH\OneDrive\Desktop\contest\pi.html">submit</a><br>
+</form>
+
+
+<p id="output"></p>
+<center>
+<script>
+function showDetails() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let mobile = document.getElementById("mobile").value;
+
+  document.getElementById("output").innerHTML =
+    "Name: " + name + "<br>" +
+    "Gmail: " + email + "<br>" +
+    "Mobile: " + mobile;
+}
+</script>
+
+   
+    </body>
+</html>
+                 
